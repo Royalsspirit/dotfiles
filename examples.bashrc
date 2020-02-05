@@ -142,4 +142,4 @@ _gopass_bash_autocomplete() {
 
 complete -F _gopass_bash_autocomplete ./gopass
 
-alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
