@@ -7,11 +7,12 @@ set nocompatible
 set number
 syntax enable
 set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=16
-let g:solarized_contrast='low'
-colorscheme solarized
-
+" let g:solarized_termtrans=1
+" let g:solarized_termcolors=16
+" let g:solarized_contrast = "high"
+" colorscheme solarized
+" colorscheme pablo
+set clipboard=unnamedplus
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
