@@ -30,7 +30,8 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#Old value: bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -170,9 +171,10 @@ bar {
         status_command i3blocks
 }
 
-bindsym $mod+shift+x exec i3lock -i $HOME/Images/WALLPAPER_DATASCIENCE_1920x1080.png -t
+#bindsym $mod+shift+x exec i3lock -i $HOME/Images/WALLPAPER_DATASCIENCE_1920x1080.png -t
+bindsym $mod+shift+x exec ~/.config/i3/lock.sh
 
-exec --no-startup-id i3-msg 'workspace $ws1; exec tilix'
+exec --no-startup-id i3-msg 'workspace $ws1; exec alacritty'
 exec --no-startup-id i3-msg 'workspace $ws2; exec firefox'
 exec --no-startup-id i3-msg 'workspace $ws3; exec /usr/bin/code'
 exec --no-startup-id i3-msg "workspace $ws4; exec chromium-browser"
@@ -180,10 +182,12 @@ exec --no-startup-id i3-msg "workspace $ws4; exec chromium-browser"
 # exec --no-startup-id firefox
 # exec --no-startup-id /usr/bin/code
 
-assign [class="tilix"] $ws1
+assign [class="Alacritty"] $ws1
 assign [class="Firefox"] $ws2
 assign [class="Chromium*"] $ws4
-assign [class="code"] $ws3 
+assign [class="Code"] $ws3 
+
+for_window [class="Yad"] floating enable
 
 bindsym $mod+Control+1 exec xrandr --output DP-1-1-2-1 --auto --left-of eDP-1-1 && exec xrandr --output DP-1-1-2-2-1 --auto --left-of DP-1-1-2-1
 bindsym $mod+Control+2 exec xrandr --output DP-1-1-2-1 --off; exec xrandr --output DP-1-1-2-2-1 --off
@@ -193,3 +197,37 @@ focus_follows_mouse no
 
 #screenshot
 bindsym Print exec gnome-screenshot -i
+
+#######
+#THEME#
+#######
+
+# set primary gruvbox colorscheme colors
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
+
+#start of window title bars & borders section
+
+# green gruvbox
+# class                 border|backgr|text|indicator|child_border
+#client.focused          $green $green $darkgray $purple $darkgray
+#client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
+#client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+#client.urgent           $red $red $white $red $red
+
+# blue gruvbox
+# class                 border|backgr|text|indicator|child_border
+client.focused          $blue $blue #FFFFFF $purple $darkgray
+client.focused_inactive $darkgray $gray $darkgray $purple $darkgray
+client.unfocused        $darkgray $gray $darkgray $purple $darkgray
+client.urgent           $red $red $white $red $red
+
+#end of window title bars & borders section
+
