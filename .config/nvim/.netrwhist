@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/gmajkic/Documents/perso/datadog-dm/internal/term'
+let g:netrw_dirhist_0='/home/gmajkic/Documents/perso/datadog-dm/internal'
+let g:netrw_dirhist_9='/home/gmajkic/Documents/perso/datadog-dm'
+let g:netrw_dirhist_8='/home/gmajkic/Documents/perso'
+let g:netrw_dirhist_7='/home/gmajkic/Documents/perso/datadog-dm/internal/term'
+let g:netrw_dirhist_6='/home/gmajkic/Documents/perso/datadog-dm/internal'
+let g:netrw_dirhist_5='/home/gmajkic/Documents/perso/datadog-dm'
+let g:netrw_dirhist_4='/home/gmajkic/Documents/perso'
+let g:netrw_dirhist_3='/home/gmajkic/Documents/perso/datadog-dm/cmd/cli'
+let g:netrw_dirhist_2='/home/gmajkic/Documents/perso/datadog-dm/cmd'
