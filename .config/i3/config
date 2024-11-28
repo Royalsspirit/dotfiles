@@ -175,9 +175,9 @@ bar {
 bindsym $mod+shift+x exec ~/.config/i3/lock.sh
 
 exec --no-startup-id i3-msg 'workspace $ws1; exec alacritty'
-exec --no-startup-id i3-msg 'workspace $ws2; exec firefox'
-exec --no-startup-id i3-msg 'workspace $ws3; exec /usr/bin/code'
-exec --no-startup-id i3-msg "workspace $ws4; exec chromium-browser"
+exec --no-startup-id i3-msg 'workspace $ws2; exec firefox mail.google.com/mail/u/0/#inbox calendar.google.com/calendar/u/0/r https://foundation.vptech.eu/'
+exec --no-startup-id i3-msg 'workspace $ws3; exec alacritty -e nvim'
+exec --no-startup-id i3-msg "workspace $ws4; exec chromium-browser mail.google.com/mail/u/0/#inbox veepee.slack.com"
 # exec --no-startup-id tilix
 # exec --no-startup-id firefox
 # exec --no-startup-id /usr/bin/code
@@ -189,8 +189,8 @@ assign [class="Code"] $ws3
 
 for_window [class="Yad"] floating enable
 
-bindsym $mod+Control+1 exec xrandr --output DP-1-1-2-1 --auto --left-of eDP-1-1 && exec xrandr --output DP-1-1-2-2-1 --auto --left-of DP-1-1-2-1
-bindsym $mod+Control+2 exec xrandr --output DP-1-1-2-1 --off; exec xrandr --output DP-1-1-2-2-1 --off
+bindsym $mod+Control+1 exec xrandr --output DP-1-2-1 --auto --left-of eDP-1 && exec xrandr --output DP-1-2-2-1 --auto --left-of DP-1-2-1
+bindsym $mod+Control+2 exec xrandr --output DP-1-2-1 --off; exec xrandr --output DP-1--2-2-1 --off
 
 ##Focus
 focus_follows_mouse no
