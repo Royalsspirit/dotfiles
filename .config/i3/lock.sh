@@ -30,7 +30,7 @@ BLURTYPE="0x5" # 7.52s
 $SCREENSHOT
 convert $IMAGE -blur $BLURTYPE $IMAGE
 #convert $IMAGE -fill black -colorize 17% -colorspace Gray -scale 10% -scale 1000% $IMAGE
-convert -composite $IMAGE ~/Images/gmo9H9U.png -gravity South -geometry -20x1200 $IMAGE
+convert -composite $IMAGE ~/Pictures/gmo9H9U.png -gravity South -geometry -20x1200 $IMAGE
 
 i3lock -i $IMAGE
 rm $IMAGE
